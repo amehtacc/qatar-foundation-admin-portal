@@ -196,6 +196,55 @@
                     <div class="form-footer">Remembered your password? <button type="button" class="link-btn" onclick="showPage('loginPage')">Sign In</button></div>
                 </div>
 
+                <!-- ===== Reset PASSWORD ===== -->
+                <div class="form-page" id="resetPasswordPage">
+
+                <h2>Reset Password</h2>
+
+                <form id="resetPasswordForm">
+
+                    <div class="form-group">
+
+                        <label>New Password</label>
+
+                        <div class="input-wrap">
+
+                            <input
+                                id="resetPassword"
+                                type="password"
+                                placeholder="Enter new password"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Confirm Password</label>
+
+                        <div class="input-wrap">
+
+                            <input
+                                id="resetConfirmPassword"
+                                type="password"
+                                placeholder="Confirm password"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn-primary">
+                        Reset Password
+                    </button>
+
+                </form>
+
+            </div>
+
             </div>
         </div>
     </div>
@@ -1923,7 +1972,9 @@
     <div class="modal" id="opportunityModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h3>Add New Opportunity</h3>
+                <h3 id="opportunityModalTitle">
+                    Add New Opportunity
+                </h3>
                 <button class="close-modal" onclick="closeOpportunityModal()">
                     <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                 </button>
@@ -1984,6 +2035,19 @@
                     <div class="input-wrap">
                         <svg class="input-icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                         <textarea id="oppFuture" placeholder="Describe career paths and opportunities after completion..." required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Prerequisites</label>
+                    <div class="input-wrap">
+                        <svg class="input-icon" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+                        </svg>
+                        <textarea 
+                            id="oppPrerequisites"
+                            placeholder="e.g. Basic HTML, CSS knowledge, Laptop with internet connection..."
+                        ></textarea>
                     </div>
                 </div>
                 <div class="form-group">
